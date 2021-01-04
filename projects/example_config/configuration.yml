@@ -1,13 +1,13 @@
 inputs:
-    setDev: false
+    setDev: true
     setLanguages: 
-        - php
+    - php
     setFrameworks: 
-        - suitecrm
-        - codeigniter
-        - wordpress
-        - prestashop
-        - symfony
+    # - suitecrm
+    # - codeigniter
+    # - wordpress
+    - prestashop
+    - symfony
     setSources: ~
     setSinks: ~
     setValidators: ~
@@ -16,12 +16,22 @@ inputs:
     setIncludes: ~
     setExcludes: 
         exclude_files:
-            - "/srv/www/htdocs/phpMyAdmin/libraries/tcpdf/fonts/dejavusans.php"
+        # - "/srv/www/htdocs/phpMyAdmin/libraries/tcpdf/fonts/dejavusans.php"
+        - "*.tar.gz"
+        - "*.zip"
+        - "*.jpeg"
+        - "*.jpg"
+        - "*.png"
+        - "*.gif"
         exclude_folders: 
-            - "/srv/www/htdocs/phpMyAdmin/themes/original/"
-            - "/home/eric/Téléchargements/prestashop/vendor/"
-            - "/home/eric/Téléchargements/prestashop/localization/"
-    setFolder: "/home/eric/Téléchargements/drupal-8.6.1/"
+        - ".git"
+        - "images"
+        - "/opt/mount/var/cache"
+        - "/opt/mount/images"
+        - "/opt/mount/.git"
+        - "/opt/mount/vendor"
+        - "/opt/mount/localization"
+    setFolder: "/opt/mount/"
     setFile: ~
     setCode: ~
     setResolvedIncludes: ~
